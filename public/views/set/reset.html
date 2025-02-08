@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>重置用户</title>
+    <link rel="icon" href="../../images/favicons/reset.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/set/reset.css" type="text/css">
+</head>
+<body>
+
+<div class="reset-wrapper">
+    <div class="header">
+        <img id="sic-logo" src="../../images/view-imgs/SIC/SIC-logo.png" alt="">
+    </div>
+    <div class="form-wrapper">
+        <div id="inputSIC">
+            <label>
+                <input type="text" name="SIC" class="input-item" id="SICInput"
+                       placeholder="请输入SIC中文全称，不能带有空格哦~">
+            </label>
+            <div class="btn" id="SICBtn">
+                确认
+            </div>
+        </div>
+        <div id="setNewUser" style="display: none">
+            <label>
+                <input type="text" name="username" placeholder="请输入新用户名"
+                       class="input-item" id="username">
+            </label>
+            <label>
+                <input type="text" name="password" class="input-item" id="password"
+                       placeholder="请输入新密码">
+            </label>
+            <div class="btn" id="userBtn">
+                确认
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="../../api/axios.min.js"></script>
+<script src="../../scripts/set/reset.js"></script>
+</body>
+</html>
