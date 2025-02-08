@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="icon" href="../image/title-logo/login.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/login.css" type="text/css">
+
+</head>
+<body>
+
+<!--登录框-->
+<div class="login-wrapper">
+    <div class="header"><img id="sic-logo" src="../image/title-logo/sic-logo.png" alt=""></div>
+    <div class="form-wrapper">
+        <label>
+            <input type="text" name="username" placeholder="用户名"
+                   class="input-item" id="username">
+        </label>
+        <label>
+            <input type="password" name="password" placeholder="密码" class="input-item" id="password">
+        </label>
+        <div class="btn">
+            登录
+        </div>
+    </div>
+    <div id="reset">重置用户</div>
+</div>
+
+<!--底部信息-->
+<div id="info">
+    程序原创：黄浩泓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    美术指导：刘梦云、 马世龙&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    程序重构：许文彬
+</div>
+
+<!--导入axios框架-->
+<script src="../library/axios.js"></script>
+
+<script>
+    //登录按钮提交数据
+    const theName = document.querySelector('#username');
+    const thePass = document.querySelector('#password');
+    const btn = document.querySelector('.btn');
+
+    function req() {
+        axios({
+            //请求行
+            method: 'post',
+            url: '/login',
+            //请求体
+            data: {
+                username: theName.value,
+                password: thePass.value
+            }
+        }).then(response => {
+            window.open('/mode');
+        }).catch(err => {
+            console.log(err.response.data);
+            alert(err.response.data + '\n实在忘记了请重置用户');
+        });
+    }
+
+    btn.addEventListener('click', () => {
+        req();
+    });
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Enter') {
+            req();
+        }
+    });
+
+    //logo旋转
+    const sic_logo = document.querySelector('#sic-logo');
+    const login_wrapper = document.querySelector('.login-wrapper');
+    let currentRotation = 0;
+    login_wrapper.addEventListener('mouseenter', function () {
+        currentRotation += 360;  // 每次鼠标进入时增加 360 度
+        sic_logo.style.transform = `rotate(${currentRotation}deg)`;
+    });
+
+
+</script>
+<script src="../js/refresh.js"></script>
+<script>
+    const reset = document.querySelector('#reset');
+    reset.addEventListener('click', () => {
+        window.location.href = '/reset';
+    });
+</script>
+</body>
+</html>

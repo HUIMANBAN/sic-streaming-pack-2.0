@@ -1,0 +1,26 @@
+#end-settings {
+    width: 100%;
+    height: 100%;
+    background-color: #fbc2eb;
+
+}
+
+#no {
+    user-select: none;
+    width: 32%;
+    height: 10%;
+    /*background-color: #9bbbee;*/
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 0 8px #838080;
+    font-size: 17px;
+    margin-left: 34%;
+    margin-top: 48%;
+}
+
+
+#end-settings .choice.selected {
+    border: 1.5px solid black;
+    font-weight: bold;
+}

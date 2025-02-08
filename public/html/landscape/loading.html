@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>待机画面：横屏</title>
+    <link rel="stylesheet" href="../../css/landscape/loading.css" type="text/css">
+    <!--导入axios框架-->
+    <script src="../../library/axios.js"></script>
+    <script>
+        let startTime;
+        axios({
+            method: 'get',
+            url: 'time',
+        }).then(response => {
+            startTime = Number(response.data);
+        });
+    </script>
+</head>
+<body>
+<div>
+    <div id="top"><p>飞跃杯总决赛</p></div>
+    <div id="poster-time">
+        <div id="poster">
+            <img src="../../image/upload/poster" alt="" id="posterImg">
+        </div>
+        <div id="time">
+            <div>
+                <p>即将开始</p>
+                <p><span id="hour">00</span>:<span id="min">00</span>:<span id="sec">00</span></p>
+            </div>
+        </div>
+    </div>
+    <div id="host">主办方：深职大</div>
+    <div id="social-medias">
+        <div id="imgs">
+            <img src="../../image/icon/bilibili.svg" alt="" class="img">
+            <img src="../../image/icon/wechat.svg" alt="" class="img">
+            <img src="../../image/icon/douyin.svg" alt="" class="img">
+            <img src="../../image/icon/weibo.svg" alt="" class="img">
+        </div>
+        <p>深职大SIC</p>
+    </div>
+    <div id="bottom">
+        <div id="bottom-topLine"></div>
+        <div id="bottom-pic">
+            <img id="school" src="../../image/icon/校徽.png" alt="">
+            <img id="sic" src="../../image/icon/横向_黑字.png" alt="">
+            <img id="panda" src="../../image/icon/panda-gray.png" alt="">
+        </div>
+    </div>
+</div>
+
+<script>
+    const hour = document.querySelector('#hour');
+    const min = document.querySelector('#min');
+    const sec = document.querySelector('#sec');
+
+    setTimeout(function () {
+        let nowTime = Date.now();
+        let timeDifferent = startTime - nowTime;
+        console.log(timeDifferent);
+        if (timeDifferent > 0) {
+            timeDifferent = timeDifferent / 1000;
+
+            let hourNum = Math.floor(timeDifferent / 3600);
+            timeDifferent = timeDifferent % 3600;
+            let minNum = Math.floor(timeDifferent / 60);
+            timeDifferent = timeDifferent % 60;
+            let secNum = Math.floor(timeDifferent);
+
+            hour.innerHTML = hourNum < 10 ? '0' + String(hourNum) : String(hourNum);
+            min.innerHTML = minNum < 10 ? '0' + String(minNum) : String(minNum);
+            sec.innerHTML = secNum < 10 ? '0' + String(secNum) : String(secNum);
+
+            let interval = setInterval(function () {
+                let secNum = Number(sec.innerHTML);
+                if (secNum === 0) {
+                    let minNum = Number(min.innerHTML);
+                    if (minNum === 0) {
+                        let hourNum = Number(hour.innerHTML);
+                        if (hourNum === 0) {
+                            clearInterval(interval);
+                            hour.innerHTML = '00';
+                            min.innerHTML = '00';
+                            sec.innerHTML = '00';
+                            return;
+                        }
+                        hourNum--;
+                        if (hourNum < 10) {
+                            hour.innerHTML = '0' + String(hourNum);
+                        } else {
+                            hour.innerHTML = String(hourNum);
+                        }
+
+                        minNum = 60;
+                    }
+                    minNum--;
+                    if (minNum < 10) {
+                        min.innerHTML = '0' + String(minNum);
+                    } else {
+                        min.innerHTML = String(minNum);
+                    }
+
+                    secNum = 60;
+                }
+                secNum--;
+                if (secNum < 10) {
+                    sec.innerHTML = '0' + String(secNum);
+                } else {
+                    sec.innerHTML = String(secNum);
+                }
+
+            }, 1000);
+        } else {
+            hour.innerHTML = '00';
+            min.innerHTML = '00';
+            sec.innerHTML = '00';
+        }
+    }, 350);
+
+
+</script>
+<script src="../../js/refresh.js"></script>
+</body>
+</html>

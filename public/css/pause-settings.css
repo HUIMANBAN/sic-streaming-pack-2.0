@@ -1,0 +1,86 @@
+#pause-settings {
+
+    width: 100%;
+    height: 80%;
+}
+
+#pause-settings #header{
+    margin-top: 20%;
+}
+.pause-set {
+    height: 20%;
+}
+
+#pause-settings .text {
+    user-select: none;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    /*background: #fbc2eb;*/
+    height: 40%;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#pause-settings .input {
+    padding-left: 10px;
+    height: 60%;
+    display: flex;
+    align-items: center;
+}
+
+#pause-settings .input input {
+    all: unset;
+    padding: 0 3%;
+    background-color: #fff;
+    width: 84%;
+    height: 70%;
+    border-radius: 15px;
+    font-size: 15px;
+    border: 2px solid transparent;
+    box-shadow: 0 0 8px #a19a9a;
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
+
+#pause-settings #header {
+
+
+}
+
+#pause-settings #describe {
+
+}
+
+#pause-settings #pause-submit {
+
+}
+
+#pause-settings .input input:focus{
+    /*outline: none;*/
+    border: 2px solid transparent;
+    background-image: linear-gradient(#fff, #fff),
+    linear-gradient(to right, rgb(167, 112, 239), rgb(207, 139, 243), rgb(253, 185, 155));
+}
+
+#pause-submit{
+    display: grid;
+    place-items: center;
+}
+#pause-submit div{
+    display: grid;
+    place-items: center;
+    /*background-color: #fff;*/
+    border-radius: 5px;
+    user-select: none;
+    width: 50%;
+    height: 40%;
+    box-shadow: 0 0 8px #a19a9a;
+
+}
+#pause-submit div:hover {
+    color: black;
+    border: 1.5px solid black;
+    font-weight: bold;
+
+}
