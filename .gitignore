@@ -1,2 +1,5 @@
-#项目的依赖包
-node_modules/
+# 上传git忽略的文件夹
+/.idea
+/node-v22.14.0-win-x64
+/node_modules
+/run.cmd

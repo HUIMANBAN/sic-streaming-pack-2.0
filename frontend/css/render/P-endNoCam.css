@@ -1,0 +1,154 @@
+@font-face {
+    font-family: 'PingfangSC-Regular';
+    src: url('../../font/PingFangSC-Regular.ttf');
+}
+@font-face {
+    font-family: 'PingfangSC-Thin';
+    src: url('../../font/PingFangSC-Thin.ttf');
+}
+* {
+    /*尺寸和边距*/
+    margin: 0;
+    padding: 0;
+}
+body {
+    /*尺寸和边距*/
+    overflow: hidden;
+    /*背景和颜色*/
+    background-color: #4371db;
+}
+
+#title {
+    /*布局*/
+    position: absolute;
+    top: 31vh;
+    /*尺寸和边距*/
+    width: 100%;
+    /*文本和字体*/
+    color: white;
+    text-align: center;
+}
+
+#title p {
+    /*文本和字体*/
+    font-family: "PingfangSC-Regular", serif;
+    font-size: 5vh
+}
+
+#info {
+    /*布局*/
+    position: absolute;
+    top: 47vh;
+    /*尺寸和边距*/
+    width: 100%;
+    /*文本和字体*/
+    font-family: "PingfangSC-Thin", serif;
+    text-align: center;
+}
+
+#info p {
+    /*文本和字体*/
+    color: white;
+    font-size: 2.9vh;
+}
+
+.sic-info-social-medias {
+    /*布局*/
+    top: 56vh;
+    position: absolute;
+    justify-content: center;
+    display: flex;
+    /*尺寸和边距*/
+    width: 100%;
+}
+
+.social-media-box {
+    /*布局*/
+    display: grid;
+    place-items: center;
+    /*尺寸和边距*/
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+.social-media-box img {
+    /*尺寸和边距*/
+    height: 4vh;
+    width: 4vh;
+}
+
+.panda {
+    /*布局*/
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    top: 62vh;
+    /*尺寸和边距*/
+    width: 100%;
+}
+.panda img {
+    /*尺寸和边距*/
+    width: 11vh;
+}
+
+#bottom {
+    /*布局*/
+    position: absolute;
+    bottom: 0;
+    /*尺寸和边距*/
+    width: 100%;
+    height: 8.5vh;
+    /*文本和字体*/
+    text-align: center;
+    /*背景和颜色*/
+    background-color: white;
+}
+
+#bottom-topLine {
+    /*尺寸和边距*/
+    width: 100%;
+    height: 0.4vh;
+    /*背景和颜色*/
+    background: orange;
+}
+
+#bottom-pic {
+    /*布局*/
+    display: flex;
+    align-items: center;
+    position: relative;
+    /*尺寸和边距*/
+    height: 8vh;
+}
+
+#school {
+    /*布局*/
+    display: inline-block;
+    left: 0;
+    /*尺寸和边距*/
+    height: 5.4vh;
+    margin-left: 1.3vh;
+}
+
+#sic {
+    /*布局*/
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    /*尺寸和边距*/
+    margin: 0 auto;
+    height: 4.8vh;
+    /*定位和变换*/
+    transform: translate(-50%, -50%); /* 将元素的中心点移动到 (50%, 50%) */
+}
+
+#panda {
+    /*布局*/
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    /*尺寸和边距*/
+    margin-left: auto;
+    height: 5.4vh;
+    margin-right: 1.3vh;
+}

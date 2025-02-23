@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>待机画面：横屏</title>
+    <link rel="stylesheet" href="../../css/render/L-loading.css" type="text/css" id="css-01">
+    <link rel="stylesheet" href="../../css/render/L-loading2.css" type="text/css" id="css-02">
+</head>
+<body>
+<div>
+    <div id="top"><p></p></div>
+    <div id="poster">
+        <img src="../../upload/poster" alt="" id="posterImg">
+    </div>
+    <div id="time">
+        <p>即将开始</p>
+        <p><span id="hour">00</span>:<span id="min">00</span>:<span id="sec">00</span></p>
+    </div>
+    <div id="host"></div>
+    <div id="social-medias">
+        <img src="../../images/view/SIC/c.png" alt="">
+    </div>
+    <div id="bottom">
+        <div id="bottom-topLine"></div>
+        <div id="bottom-pic">
+            <img id="school" src="../../images/view/SIC/school-badge.png" alt="">
+            <img id="sic" src="../../images/view/SIC/SIC.png" alt="">
+            <img id="panda" src="../../images/view/SIC/panda-gray.png" alt="">
+        </div>
+    </div>
+</div>
+<script src="../../api/axios.min.js"></script>
+<script src="../../scripts/render/loading.js"></script>
+<script>
+    const img = document.querySelector("img");
+    const css01 = document.querySelector("#css-01");
+    const css02 = document.querySelector("#css-02");
+
+    window.onload = () => {
+        const { naturalWidth, naturalHeight } = img;
+        if (naturalWidth < naturalHeight) {
+            css01.disabled = true;
+        } else {
+            css02.disabled = true;
+        }
+    };
+</script>
+</body>
+</html>

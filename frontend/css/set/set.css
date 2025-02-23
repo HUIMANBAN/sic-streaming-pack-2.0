@@ -1,0 +1,296 @@
+@font-face {
+    font-family: 'PingfangSC-Regular';
+    src: url('../../font/PingFangSC-Regular.ttf');
+}
+* {
+    /*尺寸和边距*/
+    margin: 0;
+    padding: 0;
+    /*文本和字体*/
+    font-family: 'PingfangSC-Regular', serif;
+
+}
+
+html {
+    /*尺寸和边距*/
+    height: 100%;
+    min-height: 735px;
+    min-width: 1250px;
+
+}
+body {
+    /*布局*/
+    position: relative;
+    /*尺寸和边距*/
+    height: 100%;
+    /*背景和颜色*/
+    background: radial-gradient(closest-corner,#fbc2eb, #a6c1ee);
+}
+
+#body-drop-area {
+    /*布局*/
+    display: grid;
+    place-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    /*尺寸和边距*/
+    width: 100%;
+    height: 100%;
+    /*文本和字体*/
+    text-align: center;
+    /*其他*/
+    pointer-events: none;
+    opacity: 0;
+}
+
+#body-drop-area.dragover {
+    /*背景和颜色*/
+    background: rgba(0, 0, 0, 0.5);
+    /*其他*/
+    opacity: 1;
+}
+
+#body-drop-area div {
+    /*布局*/
+    position: absolute;
+    /*文本和字体*/
+    color: white;
+}
+
+#symbol {
+    /*布局*/
+    display: block;
+    /*尺寸和边距*/
+    margin: 0 auto;
+    width: 300px;
+}
+
+#tips {
+    /*布局*/
+    display: block;
+    /*尺寸和边距*/
+    margin-top: 30px;
+    /*文本和字体*/
+    font-weight: bold;
+    font-size: 50px;
+}
+
+#set-box {
+    /*布局*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width:1250px;
+    /*定位和变换*/
+    transform: translate(-50%, -50%);
+}
+
+#tab-bar {
+    /*布局*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*尺寸和边距*/
+    width: 600px;
+    margin: 0 auto;
+    height: 45px;
+    /*背景和颜色*/
+    background: #fff;
+    /*边框、阴影和其他装饰*/
+    border-radius: 10px;
+}
+
+.tab-container {
+    /*布局*/
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    /*尺寸和边距*/
+    width: 150px;
+    --in_height: 45px;
+    height: var(--in_height);
+    /*文本和字体*/
+    text-align: center;
+}
+
+.tab {
+    /*布局属性*/
+    display: block;
+    /*尺寸和边距*/
+    width: 150px;
+    height: var(--in_height);
+    /*文本和字体*/
+    color: black;
+    font-size: 17px;
+    line-height: var(--in_height);
+    /*背景和颜色*/
+    background: #fff;
+    /*边框、阴影和其他装饰*/
+    border-radius: 10px;
+    /*其他*/
+    user-select: none;
+}
+
+.tab.selected {
+    /*背景和颜色*/
+    background: var(--theme-blue);
+    /*文本和字体*/
+    color:white;
+}
+
+#tab-content {
+    /*布局*/
+    display: block;
+    /*尺寸和边距*/
+    width: 1250px;
+    height: 500px;
+    padding: 0 50px;
+    margin: 30px auto 0;
+    /*背景和颜色*/
+    background: #fff;
+    /*边框、阴影和其他装饰*/
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+#iframe-container {
+    /*布局*/
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    /*尺寸和边距*/
+    height: 100%;
+    width: 640px;
+}
+
+
+.iframe {
+    /*布局*/
+    display: block;
+    /*尺寸和边距*/
+    margin: 0 auto;
+    /*背景和颜色*/
+    background: transparent;
+    /*边框、阴影和其他装饰*/
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    border: none;
+    /*其他*/
+    pointer-events: none;
+    user-select: none;
+}
+
+
+#settings-container {
+    /*布局*/
+    display: grid;
+    place-items: center;
+    float: left;
+    /*尺寸和边距*/
+    width: 450px;
+    height: 100%;
+    margin-left: 60px;
+}
+
+.setting {
+    /*布局*/
+    display: none;
+}
+
+.setting.selected {
+    /*布局*/
+    display: block;
+}
+
+
+#iframe-controls {
+    /*布局*/
+    display: flex;
+    align-content: center;
+    /*尺寸和边距*/
+    height: 28px;
+    margin-top: 10px;
+    /*背景和颜色*/
+    background: transparent;
+    /*边框、阴影和其他装饰*/
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+}
+
+#url {
+    all: unset;
+    /*尺寸和边距*/
+    width: 350px;
+    height: 28px;
+    /*文本和字体*/
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+    /*背景和颜色*/
+    background: transparent;
+    /*边框、阴影和其他装饰*/
+    border-radius: inherit;
+}
+
+#url:hover {
+    /*背景和颜色*/
+    background: var(--gray-100);
+}
+
+#iframe-controls div {
+    /*布局*/
+    display: grid;
+    place-items: center;
+    /*尺寸和边距*/
+    width: 96px;
+    height: 28px;
+    margin-left: 1px;
+    /*文本和字体*/
+    font-size: 16px;
+    /*背景和颜色*/
+    background: transparent;
+    /*边框、阴影和其他装饰*/
+    border-radius: inherit;
+    /*其他*/
+    user-select: none;
+}
+
+#iframe-controls div:hover {
+    /*背景和颜色*/
+    background: var(--gray-100);
+}
+
+#iframe-controls div:active {
+    /*文本和字体*/
+    font-size: 15px;
+}
+
+#logo-box {
+    /*布局*/
+    display: grid;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    /*尺寸和边距*/
+    width: 1250px;
+    height: 80px;
+    /*背景和颜色*/
+    place-items: center;
+    user-select: none;
+}
+
+#logo{
+    /*布局*/
+    display: block;
+    position: absolute;
+    /*尺寸和边距*/
+    height: 45px;
+}
+
+.no-points{
+    pointer-events: none;
+}

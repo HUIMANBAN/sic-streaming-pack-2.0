@@ -1,0 +1,140 @@
+@font-face {
+    font-family: 'PingfangSC-Regular';
+    src: url('../../font/PingFangSC-Regular.ttf');
+}
+@font-face {
+    font-family: 'PingfangSC-Thin';
+    src: url('../../font/PingFangSC-Thin.ttf');
+}
+* {
+    /*尺寸和边距*/
+    margin: 0;
+    padding: 0;
+    /*文本和字体*/
+    font-family: 'PingfangSC-Regular',serif;
+}
+
+html {
+    /*尺寸和边距*/
+    height: 100%;
+}
+
+body {
+    /*尺寸和边距*/
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    /*背景和颜色*/
+    background: black;
+}
+
+
+.socket {
+    /*布局*/
+    display: grid;
+    justify-content: center;
+    align-items: end;
+    /*尺寸和边距*/
+    width: 100vw;
+    height: 40vh;
+    margin-bottom: 5vh;
+}
+
+.socket img {
+    /*布局*/
+    display: block;
+    /*尺寸和边距*/
+    height: 25vh;
+}
+
+.container {
+    /*布局*/
+    position: absolute;
+    /*尺寸和边距*/
+    width: 100%;
+    height: 20vh;
+    /*文本和字体*/
+    text-align: center;
+    color: white;
+}
+
+.container h1 {
+    /*布局*/
+    display: grid;
+    place-items: center;
+    /*尺寸和边距*/
+    width: 100%;
+    height: 13vh;
+    /*文本和字体*/
+    font-size: 7.5vh;
+    font-weight: lighter;
+}
+
+.container h2 {
+    /*布局*/
+    display: grid;
+    place-items: center;
+    /*尺寸和边距*/
+    width: 100%;
+    height: 13vh;
+    /*文本和字体*/
+    font-size: 5.8vh;
+    font-weight: lighter;
+}
+
+#bottom {
+    /*布局*/
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    /*尺寸和边距*/
+    width: 100%;
+    height: 8vh;
+    /*文本和字体*/
+    text-align: center;
+    /*背景和颜色*/
+    background-color: white;
+}
+
+#bottom-topLine {
+    /*尺寸和边距*/
+    width: 100%;
+    height: 1vh;
+    /*背景和颜色*/
+    background: orange;
+}
+
+#bottom-pic {
+    /*尺寸和边距*/
+    height: 7vh;
+}
+
+#school {
+    /*布局*/
+    display: inline-block;
+    float: left;
+    /*尺寸和边距*/
+    margin-top: 0.75vh;
+    height: 5.5vh;
+    margin-left: 0.75vh;
+}
+
+#sic {
+    /*布局*/
+    display: inline-block;
+    /*尺寸和边距*/
+    margin-top: 0.75vh;
+    height: 5.5vh;
+    margin-left: 0.75vh;
+}
+
+#panda {
+    /*布局*/
+    display: inline-block;
+    float: right;
+    /*尺寸和边距*/
+    margin-top: 0.75vh;
+    height: 5.5vh;
+    margin-right: 0.75vh;
+}

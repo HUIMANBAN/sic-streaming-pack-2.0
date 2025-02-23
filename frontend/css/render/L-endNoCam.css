@@ -1,0 +1,145 @@
+@font-face {
+    font-family: 'PingfangSC-Regular';
+    src: url('../../font/PingFangSC-Regular.ttf');
+}
+@font-face {
+    font-family: 'PingfangSC-Thin';
+    src: url('../../font/PingFangSC-Thin.ttf');
+}
+
+
+* {
+    /*尺寸和边距*/
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /*布局*/
+    overflow: hidden;
+    /*背景和颜色*/
+    background-color: #4371db;
+}
+
+.container {
+    /*尺寸和边距*/
+    margin-top: 10vh;
+    width: 100%;
+    /*文本和字体*/
+    color: white;
+    text-align: center;
+}
+
+#title p {
+    /*文本和字体*/
+    font-family: "PingfangSC-Regular", serif;
+    font-size: 9vh
+}
+
+#info {
+    /*尺寸和边距*/
+    margin-top: 1vh;
+    /*文本和字体*/
+    text-align: center;
+    font-family: "PingfangSC-Thin", serif;
+}
+
+#info p {
+    /*文本和字体*/
+    font-size: 6vh;
+}
+
+.sic-info-social-medias {
+    /*布局*/
+    justify-content: center;
+    display: flex;
+    /*尺寸和边距*/
+    margin-top: 1vh;
+}
+
+.social-media-box {
+    /*布局*/
+    display: grid;
+    place-items: center;
+    /*尺寸和边距*/
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+.social-media-box img {
+    /*尺寸和边距*/
+    height: 8vh;
+}
+
+
+.panda {
+    /*布局*/
+    display: grid;
+    justify-content: center;
+    /*尺寸和边距*/
+    margin-top: 2vh;
+    width: 100%;
+}
+
+.panda img {
+    /*尺寸和边距*/
+    width: 28vh;
+}
+
+/*底部*/
+#bottom {
+    /*布局*/
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    /*尺寸和边距*/
+    width: 100%;
+    height: 8vh;
+    /*文本和字体*/
+    text-align: center;
+    /*背景和颜色*/
+    background-color: white;
+}
+
+#bottom-topLine {
+    /*尺寸和边距*/
+    width: 100%;
+    height: 1vh;
+    /*背景和颜色*/
+    background: orange;
+}
+
+#bottom-pic {
+    /*尺寸和边距*/
+    height: 7vh;
+}
+
+#school {
+    /*布局*/
+    display: inline-block;
+    float: left;
+    /*尺寸和边距*/
+    margin-top: 0.75vh;
+    height: 5.5vh;
+    margin-left: 0.75vh;
+}
+
+#sic {
+    /*布局*/
+    display: inline-block;
+    /*尺寸和边距*/
+    margin-top: 0.75vh;
+    height: 5.5vh;
+    margin-left: 0.75vh;
+}
+
+#panda {
+    /*布局*/
+    display: inline-block;
+    float: right;
+    /*尺寸和边距*/
+    margin-top: 0.75vh;
+    height: 5.5vh;
+    margin-right: 0.75vh;
+}
+

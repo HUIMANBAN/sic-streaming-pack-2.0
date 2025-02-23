@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>设置：竖屏模式</title>
+    <link rel="stylesheet" href="../../css/set/root.css" type="text/css">
+    <link rel="stylesheet" href="../../css/set/set.css" type="text/css">
+    <link rel="stylesheet" href="../../css/set/input.css" type="text/css">
+    <link rel="icon" href="../../images/favicons/set.png" type="image/x-icon">
+    <style>
+        .iframe {
+            width: 243px;
+            height: 432px;
+        }
+
+        .setting[data-index='4'] {
+            text-align: center;
+            font-size: 20px;
+        }
+    </style>
+    <script>
+        const Mode = 1;
+    </script>
+</head>
+<body>
+<div id="body-drop-area">
+    <div>
+        <img src="../../images/view/SIC/panda.png" alt="" id="symbol">
+        <p id="tips">松开鼠标即可添加图片</p>
+    </div>
+</div>
+<div id="set-box">
+    <!--导航栏-->
+    <div id="tab-bar">
+        <div class="tab-container">
+            <div class="tab selected" data-index="1">待机页面</div>
+        </div>
+        <div class="tab-container">
+            <div class="tab" data-index="2">暂停页面</div>
+        </div>
+        <div class="tab-container">
+            <div class="tab" data-index="3">结束页面</div>
+        </div>
+        <div class="tab-container">
+            <div class="tab" data-index="4">右下角水印</div>
+        </div>
+    </div>
+    <!--内容-->
+    <div id="tab-content">
+        <div id="iframe-container">
+            <div>
+                <iframe class="iframe"></iframe>
+                <div id="iframe-controls">
+                    <label for="url"></label>
+                    <input id="url" type="text" name="url">
+                    <div id="open">打开</div>
+                    <div id="refresh">刷新</div>
+                    <div id="copy">复制</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="settings-container">
+            <!--待机-->
+            <div class="setting selected" data-index="1" id="loading-settings">
+                <div>
+                    <div class="text">主标题(一般写活动名称,支持&lt;br&gt;换行标签)</div>
+                    <div class="input">
+                        <label>
+                            <input type="text" name="main-title">
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <div class="text">副标题(一般写主办单位,支持&lt;br&gt;换行标签)</div>
+                    <div class="input">
+                        <label>
+                            <input type="text" name="sub-title">
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <div class="text">开始时间(点击右边小图标,或点击日期手动更改)</div>
+                    <div class="input">
+                        <label>
+                            <input type="datetime-local" name="time-input" style="text-align: center">
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <div class="text">海报图片(支持jpg , jpeg , webp , png , gif)</div>
+                    <div id="poster-input">
+                        <div id="drop-area">
+                            <p id="upload-text">拖拽文件到窗口&nbsp;&nbsp;或&nbsp;&nbsp;<label for="file-upload" class="custom-file-upload">点击选择文件</label><span></span>
+                            </p>
+                            <input type="file" id="file-upload" name="poster">
+                        </div>
+                    </div>
+                </div>
+                <div class="submit">
+                    <div id="loading-submit">提交</div>
+                </div>
+            </div>
+
+            <!--暂停-->
+            <div class="setting " data-index="2" id="pause-settings">
+                <div class="pause-set">
+                    <div class="text">标题(如：活动暂停、中场休息中...)</div>
+                    <div class="input">
+                        <label>
+                            <input type="text" name="header">
+                        </label>
+                    </div>
+                </div>
+                <div class="pause-set">
+                    <div class="text">描述(如：请稍等、18:45继续比赛,支持&lt;br&gt;换行标签)</div>
+                    <div class="input">
+                        <label>
+                            <input type="text" name="describe">
+                        </label>
+                    </div>
+                </div>
+                <div class="submit">
+                    <div id="pause-submit">提交</div>
+                </div>
+            </div>
+
+            <div class="setting " data-index="3" id="end-settings">
+                <div id="no" class="camera selected">
+                    无摄像机预留位
+                </div>
+            </div>
+
+            <div class="setting" data-index="4">
+                竖屏模式一般不加水印<br>根据实际情况考虑是否添加<br>(´▽`ʃ♡ƪ)
+            </div>
+        </div>
+    </div>
+</div>
+<div id="logo-box">
+    <img src="../../images/view/SIC/SIC-5.png" id="logo" alt="">
+</div>
+<script src="../../api/axios.min.js"></script>
+<script src="../../scripts/set/set.js"></script>
+<script src="../../scripts/set/loading-set.js"></script>
+<script src="../../scripts/set/pause-set.js"></script>
+<script src="../../scripts/set/end-set.js"></script>
+<script src="../../scripts/set/getData.js"></script>
+</body>
+</html>

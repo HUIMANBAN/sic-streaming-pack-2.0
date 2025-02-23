@@ -1,0 +1,195 @@
+@font-face {
+    font-family: 'PingfangSC-Regular';
+    src: url('../../font/PingFangSC-Regular.ttf');
+}
+@font-face {
+    font-family: 'PingfangSC-Thin';
+    src: url('../../font/PingFangSC-Thin.ttf');
+}
+
+* {
+    /*布局*/
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    /*布局*/
+    overflow: hidden;
+}
+
+body {
+    /*布局*/
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    /*背景和颜色*/
+    background-color: #4371db;
+}
+
+.container {
+    /*布局*/
+    display: flex;
+    /*尺寸和边距*/
+    height: 70vh;
+    width: 100%;
+    margin-top: 15vh;
+    /*文本和字体*/
+    text-align: center;
+}
+
+.container .left {
+    /*布局*/
+    display: grid;
+    place-items: center;
+    /*尺寸和边距*/
+    margin-left: 2%;
+    width: 56%;
+}
+
+
+.cam-border {
+    /*布局*/
+    display: grid;
+    place-items: center;
+    /*尺寸和边距*/
+    --cam-width: 52vw;
+    width: var(--cam-width);
+    height: calc(var(--cam-width) * 9 / 16);
+    /*文本和字体*/
+    color: #466465;
+    font-size: 5vh;
+    /*边框、阴影和其他装饰*/
+    border: 0.6vh dotted #466465;
+}
+
+.container .right {
+    /*布局*/
+    position: absolute;
+    right: 0;
+    /*尺寸和边距*/
+    width: 42%;
+    height: 70vh;
+}
+
+#title {
+    /*布局*/
+    display: grid;
+    place-items: center;
+    /*尺寸和边距*/
+    margin-top: 13.5vh;
+    height: 20vh;
+    width: 100%;
+}
+
+.container .right #title p {
+    /*布局*/
+    display: block;
+    /*文本和字体*/
+    font-family: "PingfangSC-Regular", serif;
+    font-size: 7vh;
+    text-align: center;
+    color: white;
+}
+
+#info{
+    /*布局*/
+    display: grid;
+    place-items: center;
+    /*尺寸和边距*/
+    height: 15vh;
+    width: 100%;
+}
+
+
+.container .right .sic-info p {
+    /*文本和字体*/
+    font-family: "PingfangSC-Thin", serif;
+    font-size: 5vh;
+    color: white;
+}
+
+
+.sic-info-social-medias {
+    /*布局*/
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    /*尺寸和边距*/
+    height: 10vh;
+}
+
+.social-media-box {
+    /*布局*/
+    display: grid;
+    place-items: center;
+    object-fit: contain;
+    /*尺寸和边距*/
+    margin-right: 0.5vw;
+    height: 10vh;
+    width: 8vh;
+    margin-left: 0.5vw;
+}
+.social-media-box img{
+    /*尺寸和边距*/
+    max-width: 8vh;
+}
+
+
+/*底部*/
+#bottom {
+    /*布局*/
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    /*尺寸和边距*/
+    width: 100%;
+    height: 8vh;
+    /*文本和字体*/
+    text-align: center;
+    /*背景和颜色*/
+    background-color: white;
+}
+
+#bottom-topLine {
+    /*尺寸和边距*/
+    width: 100%;
+    height: 1vh;
+    /*背景和颜色*/
+    background: orange;
+}
+
+#bottom-pic {
+    /*尺寸和边距*/
+    height: 7vh;
+}
+
+#school {
+    /*布局*/
+    display: inline-block;
+    float: left;
+    /*尺寸和边距*/
+    margin-top: 0.75vh;
+    margin-left: 0.75vh;
+    height: 5.5vh;
+}
+
+#sic {
+    /*布局*/
+    display: inline-block;
+    /*尺寸和边距*/
+    margin-top: 0.75vh;
+    height: 5.5vh;
+    margin-left: 0.75vh;
+}
+
+#panda {
+    /*布局*/
+    display: inline-block;
+    float: right;
+    /*尺寸和边距*/
+    margin-top: 0.75vh;
+    height: 5.5vh;
+    margin-right: 0.75vh;
+}
+

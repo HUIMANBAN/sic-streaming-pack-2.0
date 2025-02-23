@@ -1,0 +1,137 @@
+@font-face {
+    font-family: 'PingfangSC-Regular';
+    src: url('../../font/PingFangSC-Regular.ttf');
+}
+@font-face {
+    font-family: 'PingfangSC-Thin';
+    src: url('../../font/PingFangSC-Thin.ttf');
+}
+* {
+    /*尺寸和边距*/
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    /*尺寸和边距*/
+    height: 100%;
+}
+
+body {
+    /*尺寸和边距*/
+    height: 100%;
+    overflow: hidden;
+    /*背景和颜色*/
+    background: black;
+}
+
+.socket {
+    /*布局*/
+    position: absolute;
+    top: 33vh;
+    /*尺寸和边距*/
+    width: 100vw;
+    height: 14vh;
+}
+
+.socket img {
+    /*布局*/
+    display: block;
+    /*尺寸和边距*/
+    height: 100%;
+    margin: 0 auto;
+}
+
+h1 {
+    /*布局*/
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 53vh;
+    /*尺寸和边距*/
+    width: 100%;
+    height: 7vh;
+    /*文本和字体*/
+    font-family: "PingfangSC-Regular", serif;
+    color: white;
+    font-size: 4.5vh;
+}
+
+h2 {
+    /*布局*/
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 61vh;
+    /*尺寸和边距*/
+    width: 100%;
+    height: 7vh;
+    /*文本和字体*/
+    color: white;
+    font-family: "PingfangSC-Regular", serif;
+    font-size: 3.5vh;
+    text-align: center;
+}
+
+#bottom {
+    /*布局*/
+    position: absolute;
+    bottom: 0;
+    /*尺寸和边距*/
+    width: 100%;
+    height: 8.5vh;
+    /*文本和字体*/
+    text-align: center;
+    /*背景和颜色*/
+    background-color: white;
+}
+
+#bottom-topLine {
+    /*尺寸和边距*/
+    width: 100%;
+    height: 0.4vh;
+    /*背景和颜色*/
+    background: orange;
+}
+
+#bottom-pic {
+    /*布局*/
+    display: flex;
+    align-items: center;
+    position: relative;
+    /*尺寸和边距*/
+    height: 8vh;
+}
+
+#school {
+    /*布局*/
+    display: inline-block;
+    left: 0;
+    /*尺寸和边距*/
+    height: 5.4vh;
+    margin-left: 1.3vh;
+}
+
+#sic {
+    /*布局*/
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    /*尺寸和边距*/
+    margin: 0 auto;
+    height: 4.8vh;
+    /*定位和变换*/
+    transform: translate(-50%, -50%);
+}
+
+#panda {
+    /*布局*/
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    /*尺寸和边距*/
+    margin-left: auto;
+    height: 5.4vh;
+    margin-right: 1.3vh;
+}
